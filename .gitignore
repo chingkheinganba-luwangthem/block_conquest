@@ -1,0 +1,21 @@
+# Backend
+block-game/target/
+block-game/.settings/
+block-game/.classpath
+block-game/.project
+block-game/.mvn/wrapper/maven-wrapper.jar
+
+# Frontend
+block-game-frontend/node_modules/
+block-game-frontend/build/
+
+# OS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+*.iml
+.vscode/

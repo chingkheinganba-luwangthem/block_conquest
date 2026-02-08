@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(20, 30px);
+    gap: 2px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  

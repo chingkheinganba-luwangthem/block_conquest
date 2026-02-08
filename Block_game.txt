@@ -1,0 +1,32 @@
+CREATE DATABASE block_game;
+USE block_game;
+---------------------------------------
+CREATE TABLE blocks (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    row_num INT,
+    col_num INT,
+    owner VARCHAR(50),
+    color VARCHAR(20)
+);
+----------------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE init_blocks()
+BEGIN
+DECLARE r INT DEFAULT 0;
+DECLARE c INT DEFAULT 0;
+
+WHILE r < 10 DO
+   SET c = 0;
+   WHILE c < 10 DO
+      INSERT INTO blocks(row_num, col_num, owner, color)
+      VALUES (r, c, NULL, 'white');
+      SET c = c + 1;
+   END WHILE;
+   SET r = r + 1;
+END WHILE;
+END$$
+
+DELIMITER ;
+
+CALL init_blocks();
