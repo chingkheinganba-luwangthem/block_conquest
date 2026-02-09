@@ -2,7 +2,7 @@ package com.game.block_game.model;
 
 
 import jakarta.persistence.*;
-
+// Entity
 @Entity
 @Table(name = "blocks")
 public class Block {
@@ -34,3 +34,4 @@ public class Block {
     public void setOwner(String owner) { this.owner = owner; }
     public void setColor(String color) { this.color = color; }
 }
+
